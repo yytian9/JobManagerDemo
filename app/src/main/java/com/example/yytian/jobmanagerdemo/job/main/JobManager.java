@@ -1,5 +1,9 @@
 package com.example.yytian.jobmanagerdemo.job.main;
 
+import com.example.yytian.jobmanagerdemo.job.callback.JobCallback;
+import com.example.yytian.jobmanagerdemo.job.config.JobConfig;
+import com.example.yytian.jobmanagerdemo.job.constant.ComType;
+
 /**
  * Created by yytian on 17-11-27.
  */
@@ -25,6 +29,26 @@ public class JobManager implements JobContract.View {
 
     @Override
     public boolean checkJobRunningByID(int job) {
+        return false;
+    }
+
+    @Override
+    public boolean addJob(Runnable runnable, ComType.THREAD_TYPE threadType) {
+        return false;
+    }
+
+    @Override
+    public boolean addJob(Runnable runnable, ComType.THREAD_TYPE threadType, JobCallback jobCallback) {
+        return false;
+    }
+
+    @Override
+    public boolean addJob(ComType.JOB_TYPE jobType, JobCallback jobCallback) {
+        return false;
+    }
+
+    @Override
+    public boolean addJob(JobConfig jobConfig) {
         return false;
     }
 
